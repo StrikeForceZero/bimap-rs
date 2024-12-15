@@ -22,6 +22,7 @@ use core::{
 /// See the [module-level documentation] for more details and examples.
 ///
 /// [module-level documentation]: crate
+#[cfg_attr(feature = "bevy", derive(bevy_reflect::Reflect))]
 pub struct BiBTreeMap<L, R> {
     left2right: BTreeMap<Ref<L>, Ref<R>>,
     right2left: BTreeMap<Ref<R>, Ref<L>>,

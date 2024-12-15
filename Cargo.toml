@@ -14,9 +14,11 @@ edition = "2018"
 [features]
 default = ["std"]
 std = []
+bevy = ["bevy_reflect"]
 
 [dependencies]
 serde = { version = "1.0", optional = true }
+bevy_reflect = { version = "0.15", optional = true }
 
 [dev-dependencies]
 serde_json = "1.0"

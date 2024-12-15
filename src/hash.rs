@@ -18,6 +18,7 @@ use std::{
 /// See the [module-level documentation] for more details and examples.
 ///
 /// [module-level documentation]: crate
+#[cfg_attr(feature = "bevy", derive(bevy_reflect::Reflect))]
 pub struct BiHashMap<L, R, LS = hash_map::RandomState, RS = hash_map::RandomState> {
     left2right: HashMap<Ref<L>, Ref<R>, LS>,
     right2left: HashMap<Ref<R>, Ref<L>, RS>,
